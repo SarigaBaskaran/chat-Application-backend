@@ -53,7 +53,7 @@ io.on('connect', (socket)=>{
         console.log("User disconnected");
         const user = removeUser(socket.id);
         if(user){
-            io.to(user.room).emit('message',{user:'dmin', text:`${user.name} has left`})
+            io.to(user.room).emit('message',{user:'admin', text:`${user.name} has left`})
         }
     })
 })
